@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /
+
+# Handle URLs starting with "source"
+RewriteRule ^source/(.*)$ source/$1 [L]
+
+# Handle URLs starting with "docs"
+RewriteRule ^docs/(.*)$ docs/$1 [L]
+
+# Check if the requested URL matches the pattern
+RewriteRule ^([^/]+)/(.+)$ public/$2?lang=$1 [L,QSA]
