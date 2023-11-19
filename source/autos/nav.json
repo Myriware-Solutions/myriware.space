@@ -3,14 +3,6 @@
         {
             "name": "Myriware",
             "path": "/index.php"
-        },
-        {
-            "name": "Structure",
-            "path": "/structure.php"
-        },
-        {
-            "name": "Banking",
-            "path": "/banking/"
         }
     ]
 }
