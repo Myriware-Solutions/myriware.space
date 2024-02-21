@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <script src="times.js"></script>
+        <link rel="stylesheet" href="classTimerStyles.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <title>Schedule</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    </head> 
+    <body>
+        <div id="classTimerBody" class="class-timer-body" onload="statePeriod();">
+            <div class="header-div">
+                <select id="classTimerScheduleSelect" class="metallic-input">
+                    <option value="undefined" selected disabled>Select</option>
+                </select>
+                <button onclick="statePeriod()" class="metallic-button">
+                    <span class="material-symbols-outlined">refresh</span>
+                </button>
+            </div>
+            <table id="classTimerList"></table>
+            <div class="bottom-div">
+                <label for="classTimerMilitaryFormatCheck">Military Format
+                    <input type="checkbox" id="classTimerMilitaryFormatCheck" class="metallic-checkbox">
+                    <span class="dot"></span>
+                </label>
+            </div>
+        </div>
+
+        <button onclick="makeDetach()">Detach</button>
+    </body>
+</html>

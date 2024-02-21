@@ -1,0 +1,23 @@
+<script src="script.js"></script>
+<script src="times.js"></script>
+<scetion>
+    <div id="classTimerBody" class="class-timer-body" onload="statePeriod();">
+        <div class="header-div">
+            <select id="classTimerScheduleSelect" class="metallic-input">
+                <option value="undefined" selected disabled>Select</option>
+            </select>
+            <button onclick="statePeriod()" class="metallic-button">
+                <span class="material-symbols-outlined">refresh</span>
+            </button>
+        </div>
+        <table id="classTimerList"></table>
+        <div class="bottom-div">
+            <label for="classTimerMilitaryFormatCheck">Military Format
+                <input type="checkbox" id="classTimerMilitaryFormatCheck" class="metallic-checkbox">
+                <span class="dot"></span>
+            </label>
+        </div>
+    </div>
+
+    <button onclick="makeDetach()">Detach</button>
+</scetion>
