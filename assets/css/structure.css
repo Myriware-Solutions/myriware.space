@@ -1,0 +1,51 @@
+html {
+    width: 100vw;
+    height: 100vh;
+    >body {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-columns: 1fr 7fr;
+        grid-template-rows: min-content 2em auto;
+        grid-template-areas:
+            "header   header"
+            "exnav    exnav"
+            "innav    main";
+        /* HEADER */
+        >header {
+            grid-area: header;
+            background-color: black;
+            color: white;
+            >h1 {
+                margin: 0.25em 1em;
+            }
+        }
+        /* NAVIGATION */
+        >nav.external {
+            padding-left: 1em;
+            grid-area: exnav;
+            background-color: grey;
+            display: flex;
+            vertical-align: center;
+            align-items: center;
+        }
+        >nav.internal {
+            padding: 1em;
+            grid-area: innav;
+            background-color: lightgrey;
+        }
+        /* CONTENT */
+        >main {
+            padding: 1em;
+            grid-area: main;
+            background-color: white;
+            h2, p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
