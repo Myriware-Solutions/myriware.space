@@ -31,6 +31,22 @@ html {
             display: flex;
             vertical-align: center;
             align-items: center;
+            >span>a {
+                display: flex;
+                vertical-align: center;
+                align-items: center;
+                text-decoration: none;
+                color: purple;
+                >span.text {
+                    display: none;
+                    transition: all linear 0.5s;
+                }
+                &:hover {
+                    >span.text {
+                        display: inline;
+                    }
+                }
+            }
         }
         >nav.internal {
             padding: 1em;

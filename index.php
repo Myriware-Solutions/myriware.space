@@ -2,11 +2,11 @@
 <html>
     <head>
         <title>Landing | Myriware</title>
-        <link rel="stylesheet" href="./assets/css/zmain.css">
+        <?php include "./assets/html/head.html" ?>
     </head>
     <body>
-        <header><h1>Myriware Landing</h1></header>
-        <nav class="external">Extern Navigation (Nowhere to go yet!)</nav>
+        <header><h1>Myriware Landing <span class="material-symbols-outlined">rocket_launch</span></h1></header>
+        <nav class="external"><?php include "./assets/html/navbar.html" ?></nav>
         <nav class="internal">Internal Navigation (Nowhere to go here!)</nav>
         <main>
             <h2>Welcome to Myriware!</h2>
