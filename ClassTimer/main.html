@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js"></script>
+        <script src="times.js"></script>
+        <link rel="stylesheet" href="classTimerStyles.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <title>Schedule</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <script src="pagescript.js"></script>
+    </head>
+    <body>
+        <div class="header-back">:</div>
+        <div class="body-content">
+            <div class="header">
+                <a class="button-type" href="#" onclick="makeDetach()"><!--span>Floating Window</span--><span class="material-symbols-outlined" translate="no">grid_view</span></a>
+                <a class="button-type" href="content.html"><!--span>Browser Window</span--><span class="material-symbols-outlined" translate="no">open_in_new</span></a>
+                <a class="button-type" href="Codebase/access.html"><span class="material-symbols-outlined" translate="no">videogame_asset</span></a>
+            </div>
+            <div class="content">
+                <div class="info">
+                    <div class="box">
+                        <div class="options">
+                            <button onclick="openPane('infopane')"><span class="material-symbols-outlined" translate="no">info</span></button>
+                            <button onclick="openPane('chatpane')"><span class="material-symbols-outlined" translate="no">forum</span></button>
+                            <button onclick="openPane('langpane')"><span class="material-symbols-outlined" translate="no">language</span></button>
+                        </div>
+                        <div class="panes">
+                            <div id="infopane" class="pane">
+                                <h1>Information</h1>
+                                <article>
+                                    <h3><span class="left">Window Mode</span><span class="right material-symbols-outlined" translate="no">grid_view</span></h3>
+                                    <p>
+                                        Window mode allows you to create a smaller window to put the schedule in. 
+                                        The benefits of this mode is that you can switch between windows to quickly access the schedule.
+                                        To switch between windows quickly, press <code>alt + tab</code>.
+                                        If you hold down <code>alt + tab</code>, you can see and switch between all open windows (cycle using <code>tab</code>).
+                                        Quikly pressing <code>alt + tab</code> will switch you between your last opened window (in most cases, the schedule window).
+                                    </p>
+                                </article>
+                                <article>
+                                    <h3><span class="left">Brower Tab Mode</span><span class="right material-symbols-outlined" translate="no">open_in_new</span></h3>
+                                    <p>
+                                        Browser Tab Mode will open the window in the current tab. 
+                                        This is the same as the Window mode, but in the current browser window. 
+                                        The benefits to this mode are that the title of the web page will change, depending on the current period and time left.
+                                    </p>
+                                </article>
+                            </div>
+                            <div id="chatpane" class="pane" style="display: none;">
+                                <h1>Chat Forum</h1>
+                                <article>
+                                    <h3>Forum</h3>
+                                    <p>
+                                        Check back here for Crusader news. 
+                                        If you have any problems, question, comments, or segestions, contact <a href="mailto:asmith@scecina.org">asmith@scecina.org</a>.</p>
+                                </article>
+                            </div>
+                            <div id="langpane" class="pane" style="display: none;">
+                                <h1>Translatability</h1>
+                                <p class="middle-line centered"><span class="right material-symbols-outlined" translate="no">more_vert</span><span class="right material-symbols-outlined" translate="no">chevron_right</span><span class="right material-symbols-outlined" translate="no">g_translate</span></p>
+                                <div class="article-box">
+                                    <article lang="en">
+                                        <h3>English</h3>
+                                        <p>This page is compatible with Chrome Translate features.</p>
+                                    </article>
+                                    <article lang="es">
+                                        <h3>Español</h3>
+                                        <p>Esta página es compatible con las funciones de traducción del navegador.</p>
+                                    </article>
+                                    <article lang="pt">
+                                        <h3>Português</h3>
+                                        <p>Esta página é compatível com os recursos do Browser Translate.</p>
+                                    </article>
+                                    <article lang="fr">
+                                        <h3>Français</h3>
+                                        <p>Cette page est compatible avec les fonctionnalités de traduction du navigateur.</p>
+                                    </article>
+                                    <article>
+                                        <h3>Italiano</h3>
+                                        <p>Questa pagina è compatibile con le funzionalità di traduzione del browser.</p>
+                                    </article>
+                                    <article>
+                                        <h3>Deutsch</h3>
+                                        <p>Diese Seite ist mit den Browser-Übersetzungsfunktionen kompatibel.</p>
+                                    </article>
+                                    <article>
+                                        <h3>Tiếng Việt</h3>
+                                        <p>Trang này tương thích với các tính năng của Trình duyệt Dịch.</p>
+                                    </article>
+                                    <article>
+                                        <h3>中国人</h3>
+                                        <p>此页面与浏览器翻译功能兼容。</p>
+                                    </article>
+                                </div>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="linked"><object data="content.html"></object></div>
+            </div>
+        </div>
+    </body>
+</html>

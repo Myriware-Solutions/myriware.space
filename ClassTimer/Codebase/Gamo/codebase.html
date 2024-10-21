@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Codebase</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <!--Script-->
+        <script src="registry.js"></script>
+        <script src="script.js"></script>
+        <script src="script_c.js"></script>
+        <link rel="stylesheet" href="../winscript.css">
+        <script src="../winscript.js"></script>
+    </head>
+    <body>
+        <div class="questionnaire" id="questionnaire" style="display: none;">
+
+        </div>
+        <div class="bar top">
+            <span>
+                Current Player: <space id="current-player">Not Started</space> | 
+                Current Phase: <space id="current-phase">Not Started</space> | 
+                Health: <span id="players-health">N/A</span> | 
+                [ Hand: <span id="player-hand">N/A</span> ]
+            </span>
+        </div>
+        <div class="bar bottom">
+            <div class="players" id="game-field">
+                <div class="player" id="player-left"></div>
+                <div class="player" id="player-right"></div>
+            </div>
+            <div class="action-menu">
+                <dl id="pre-game-action-menu">
+                    <dt>Pre Game Actions</dt>
+                    <dd>L Player <input type="text" id="player-left-deck-select" value="debugone"></dd>
+                    <dd>R Player <input type="text" id="player-right-deck-select" value="debugtwo"></dd>
+                    <dd><button onclick="StartGame()">Start Game</button></dd>
+                </dl>
+                <div>
+                    <div>
+                        <dl>
+                            <dt>Field Control</dt>
+                            <dd><button onclick="FlipField();">Flip Field</button></dd>
+                            <dd><button onclick="EndTurnButton();">End Turn</button></dd>
+                        </dl>
+                    </div>
+                    <div id="draw-phase-control" class="phase-control">
+                        <dl>
+                            <dt>Draw Phase</dt>
+                            <dd><button onclick="DrawCardButton()">Draw Card</button></dd>
+                        </dl>
+                    </div>
+                    <div id="set-phase-control" class="phase-control">
+                        <dl>
+                            <dt>Set Phase</dt>
+                            <dd><button onclick="ProgressPhaseButton('main');">Skip Phase</button></dd>
+                        </dl>
+                        <button onclick="MoveEntityFromHandToFieldButton();">Entity: Hand -> Field (Next Phase)</button>
+                        <div class="set-list">
+                            <div id="set-from-list"></div>
+                            <div id="set-to-list"></div>
+                        </div>
+                        <br>
+                        <button onclick="MoveProtocalFromHandToFieldButton();">Protocal: Hand -> Field</button>
+                        <div class="set-list">
+                            <div id="set-protocal-from-list"></div>
+                            <div id="set-protocal-to-list"></div>
+                        </div>
+                    </div>
+                    <div id="main-phase-control" class="phase-control">
+                        <dl>
+                            <dt>Main Phase</dt>
+                            <dd><button onclick="ProgressPhaseButton('attack');">Attack Phase</button></dd>
+                            <div id="main-phase-options"></div>
+                        </dl>
+                    </div>
+                    <div id="attack-phase-control" class="phase-control">
+                        <dl>
+                            <dt>Attack Phase</dt>
+                            <dd><button onclick="ProgressPhaseButton('secondary');">Skip Phase</button></dd>
+                            <dd>Difference: <span id="attack-difference"></span></dd>
+                        </dl>
+                        <button onclick="AttackCardButton();">Attack</button>
+                        <div id="attack-list">
+                            <div id="attack-list-attacker"></div>
+                            <div id="attack-list-defender"></div>
+                        </div>
+                    </div>
+                    <div id="secondary-phase-control" class="phase-control">
+                        <dl>
+                            <dt>Secondary Phase</dt>
+                            <dd><button onclick="ProgressPhaseButton('end');">End Phase</button></dd>
+                            <div id="secondary-phase-options"></div>
+                        </dl>
+                    </div>
+                    <div id="end-phase-control" class="phase-control">
+                        <dl>
+                            <dt>End Phase</dt>
+                            <dd><button onclick="TurnOverButton();">Turn Over Player</button></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+div#WindowScriptConsole {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 27em;
+    height: 20em;
+    display: grid;
+    grid-template-rows: 1em 19em;
+    font-family: 'Courier New', Courier, monospace;
+    >div#WindowScriptConsoleHeader {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        background-color: gray;
+        >button {
+            border-style: none;
+            height: 1em;
+        }
+    }
+    >div#WindowScriptConsoleBody {
+        background-color: black;
+        padding: 0.5em;
+        overflow: auto;
+        >p.cmdLine {
+            margin: 0;
+            padding: 0;
+            &.normal { color: white; }
+            &.error { color: red; }
+            &.warn { color: orangered; }
+            >span.blinking {
+                animation: blink 1s step-start 0s infinite;
+            }
+        }
+    }
+}
+
+@keyframes blink {
+    50% {
+      opacity: 0.0;
+    }
+}

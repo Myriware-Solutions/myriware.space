@@ -1,0 +1,155 @@
+html {
+  padding: 0;
+  margin: 0;
+  > body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-image: url("./background.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    a.button-type, button {
+      text-decoration: none;
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: white;
+      padding: 2px 1em;
+      border-radius: 2px;
+      cursor: pointer;
+      margin: 0 0.5em 0 0.5em;
+      display: flex;
+      vertical-align: baseline;
+      transition: all linear 0.1s;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+      > span {
+        margin: 0;
+        padding: 0;
+      }
+  }
+  *.article-box {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    height: 100% !important;
+    overflow: auto;
+  }
+  > div.header-back {
+    z-index: 10;
+    background-color: black;
+    opacity: 50%;
+    height: 2em;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+  > div.body-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-rows: 2em calc(100vh - 2em);
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    > div.header {
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      vertical-align: center;
+      justify-content: center;
+    }
+    > div.content {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      > div.info {
+        padding: 1em;
+        box-sizing: border-box;
+        > div.box {
+          padding: 1em;
+          border: 3px solid #777;
+          background-color: white;
+          border-radius: 0.25em;
+          height: 100%;
+          box-sizing: border-box;
+          display: grid;
+          grid-template-rows: 6% 94%;
+          > div.options {
+            display: flex;
+            box-sizing: border-box;
+          }
+          > div.panes {
+            height: 100%;
+            box-sizing: border-box;
+            >div.pane {
+              box-sizing: border-box;
+              height: 100%;
+              overflow-y: scroll;
+              > h1 {
+                display: flex;
+                justify-content: center;
+                margin-top: 0;
+                margin-bottom: 0;
+              }
+              > h3, >article>h3 {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                margin-top: 1em;
+                margin-bottom: 0;
+                > span {
+                  display: flex;
+                  vertical-align: center;
+                  &.left {
+                    justify-content: left;
+                  }
+                  &.right {
+                    justify-content: right;
+                  }
+                }
+              }
+              > p, >article>p {
+                margin-top: 0;
+                margin-bottom: 0;
+                &.middle-line {
+                  display: flex;
+                  vertical-align: center;
+                }
+                &.centered {
+                  display: flex;
+                  justify-content: center;
+                }
+              }
+              &#chatpane {
+                > article {
+                  padding: 0.5em;
+                  border-radius: 0.5em;
+                  transition: all linear 0.25s;
+                  >h3 {
+                    margin-top: 0;
+                  }
+                  &:hover {
+                    background-color: lightcyan;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      > div.linked {
+          width: 100%;
+          height: 100%;
+          height: 100%;
+          padding: 1em;
+          object {
+              width: 100%;
+              height: 60vh;
+          }
+        }
+      }
+    }
+  }
+}
